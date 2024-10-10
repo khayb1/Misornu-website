@@ -453,8 +453,7 @@ color:white;
   flex-direction: column;
   justify-content: space-between;
   flex grow:1;
- 
-  width: 300px;
+  max-width: 300px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
