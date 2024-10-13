@@ -12,7 +12,7 @@
     --main-color: #0a7dfc;
     --second-text:#f1eeee;
     --white-text:#fff;
-    --margin:13%;
+    --margin:11%;
 
 }
 .socials{
@@ -63,11 +63,6 @@ header{
   color: var(--main-text);
   font-weight: bold;
 }
-.navbar-brand h5{
-  font-size: 1.9rem;
-  color: var(--main-color);
-  font-weight: bolder;
-}
 
 #header-contact, #header-location, #header-mail {
   color: grey;
@@ -76,7 +71,7 @@ header{
   align-items: center;
   font-weight: 600;
   padding: auto;
-  font-size:15pxx;
+  font-size:1vw;
 } 
 #header-contact div, #header-location div, #header-mail div, .logo span {
   text-align: left; 
@@ -85,10 +80,9 @@ header{
 }
 #header-contact span, #header-location span, #header-mail span, .logo span {
   display: block; 
-  font-size: 0.8rem; 
   color: var(--main-text);
   font-weight: 700;
-  font-size: 11.5px;
+  font-size: 1vw;
 }  
 .fas-i{
   color: var(--main-color);
@@ -197,19 +191,19 @@ top: -40px;
   left: var(--margin);
 }
 .hero-text h1{
-  font-size: 3.6rem;
-  font-weight: 700;
-  margin-bottom: 5rem;
+  font-size: 4vw;
+  font-weight: 750;
+  margin-bottom: 5vw;
   display: flex;
   flex-direction: column;
   color: var(--background);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 } 
 .hero-btn{
   font-weight: 700;
   padding: 10px 20px;
   border: none;
-  font-size: large;
+  font-size: 1.5vw;
   border-radius: 20px ;
   color: var(--background);
   text-decoration: none;
@@ -230,8 +224,8 @@ top: -40px;
 
 /* about us  */
 .about-us{
-  height:80vh;
-  width: 100%;
+  height:fit-content;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   padding: 0 var(--margin)  0 var(--margin);
@@ -251,7 +245,7 @@ top: -40px;
 .about-us-text{
   height: 250px;
   overflow-y: scroll;
-  width: 450px;
+  width: 30vw;
   padding-left: 20px;
   margin-top: 50px;
 }
@@ -273,12 +267,12 @@ top: -40px;
   padding: 20px;
   border: 10px solid rgb(235, 232, 232);
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 7rem;
+  height: 7rem;
   margin-right:20px;
 }
 .about-us-text::-webkit-scrollbar {
-  width: 12px;
+  width: 0.8rem;
 }
 
 .about-us-text::-webkit-scrollbar-thumb {
@@ -305,10 +299,10 @@ top: -40px;
 
 /* champion section  */
 .champion-section{
- background-image: url(assets/images/champion-img.png);
+ background-image: url(assets/images/champion-img.jpg);
  background-position: center;
  background-repeat: no-repeat;
- background-size: contain; 
+ background-size:contain; 
  height: 70vh;
  width: 100%;
  display: flex;
@@ -318,8 +312,6 @@ top: -40px;
 .champion-section h2{
   color: var(--background);
   font-weight: 800;
-  
-  /* text-align: center; */
 
 }
 
@@ -788,13 +780,7 @@ font-size: 2;
 font-weight: 800; 
 color: var(--main-color);
 }
-/* .fa-brands, .fa-solid{
-  color: var(--background);
-}
-.fa-brands:hover, .fa-solid:hover{
-opacity: 1;
-color: var(--main-color);
-} */
+
 
 .IG{
   display: block;
@@ -837,12 +823,80 @@ padding:10px var(--margin);
 /* smaller scren  */
 @media only screen and (max-width: 900px) {
 
+  /* hero section  */
+  .hero{
+    /* background-position: center; 
+    background-repeat: no-repeat;   */
+    background-size: cover;
+    height: 80vh; 
+    width: 100vw; 
+    position: relative;
+    top: -30;
+    z-index: 1;
+  }
+  .hero::before {
+    background-color: rgba(30, 30, 30,0.6 );
+  }
+  .hero-logo{
+    position: relative;
+    height: 80vh; 
+    left: -30%;
+    opacity: 60%;
+  }
+.hero-text h1{
+  font-size: 9vw;
+}
+.hero-btn{
+  font-size:4vw ;
+}
+
 /* about us  */
 .about-us{
   display: block;
-  width: 100%;
-  /* height: fit-content; */
+  width:100vw ;
 }
+.about-us h6{
+top: -40px;
+padding-bottom: 1rem;
+}
+.about-us-text{
+  width: 100%;
+  margin-top: 70px;
+
+}
+.about-us div{
+  display: block;
+}
+.about-us-text img{
+width: 4rem;
+height: 4rem;
+padding: 10px;
+border: 5px solid rgb(235, 232, 232);
+}
+.about-us-img{
+  width: 100%;
+}
+.about-us-img img{
+width: 100%;
+object-fit: fill;
+
+}
+/* champion section  */
+ .champion-section{
+   background-position: top;
+   background-size:auto;
+   text-align: center;
+}
+.champion-container{
+text-align: center;
+top: 0;
+left: 0;
+} 
+
+/* FAQ section  */
+.FAQ p{
+  text-align:left ;
+
 
 /* client section  */
 
