@@ -4,8 +4,9 @@
     scroll-behavior: smooth;
     text-decoration: none;
     box-sizing: border-box;
-
+ 
 }
+
 :root{
     --main-text: #111;
     --background:#ffffff;
@@ -203,7 +204,7 @@ top: -40px;
   font-weight: 700;
   padding: 10px 20px;
   border: none;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   border-radius: 20px ;
   color: var(--background);
   text-decoration: none;
@@ -236,7 +237,7 @@ top: -40px;
 }
 .about-us h6{
   position: absolute;
-  top:90px;
+  top:60px;
   color: var(--main-color);
   font-weight: 700;
  
@@ -361,6 +362,7 @@ top: -40px;
   z-index:10 ;
   background-color: var(--background);
   padding: 20px 50px 50px 50px;
+  border-radius: 3px 3px;
 }
 
 .FAQ-column {
@@ -405,6 +407,8 @@ top: -40px;
   border-top: 2px solid var(--second-text);
 }
 
+/* client section  */
+
 .client{
   padding:150px var(--margin);
   text-align:center ;
@@ -416,11 +420,9 @@ top: -40px;
 }
 .client h6{
   color: var(--main-color);
-
 }
 .client h2{
   font-weight: 700;
-
 }
 .client p{
   font-weight: 400;
@@ -429,7 +431,6 @@ top: -40px;
 .client p span{
   text-align: center;
   display: block;
-  
 }
 
 .client-logo{
@@ -452,11 +453,11 @@ top: -40px;
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
-  width: 300px;
+  /* width: 300px; */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
   position: relative;
   transition: transform 0.3s ease; 
 }
@@ -507,6 +508,7 @@ top: -40px;
 .stars i {
   color: gold;
   margin-left: 5px;
+  font-size:x-small;
 }
 /* event section  */
 .event{
@@ -827,8 +829,6 @@ padding:10px var(--margin);
 }
   /* hero section  */
   .hero{
-    /* background-position: center; 
-    background-repeat: no-repeat;   */
     background-size: cover;
     height: 80vh; 
     width: 100vw; 
@@ -898,15 +898,25 @@ left: 0;
 /* FAQ section  */
 .FAQ p{
   text-align:left ;
-
+}
+.FAQ p, .FAQ p span, .FAQ h6 span, .FAQ h2{
+  display: block;
+  text-align: center;
+}
+.FAQ-container{
+  margin: 5px;
+  padding: 10px 10px 10px 10px;
+}
 
 /* client section  */
-
+.client p{
+color: var(--main-text);
+font-weight: 450;
+}
 .card-holder{
   display: flex;
   flex-direction: column;
-  row-gap: 3rem;
-  justify-content: center;
+  row-gap: 4rem;
 }
   /* FAQ section  */
   .info{
