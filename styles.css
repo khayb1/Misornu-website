@@ -568,7 +568,6 @@ top: -40px;
   position: relative;
   background-color: var(--second-text);
   padding-bottom: 7rem;
-  
 }
 .contact img{
   position: absolute;
@@ -687,7 +686,7 @@ iframe{
 }
 .email-footer img{
 position: absolute;
-left: -10%;
+left: -9%;
 top: 0;
 height: 9rem;
 opacity: 40%;
@@ -929,7 +928,7 @@ font-weight: 450;
     margin: 20px 0;
   }
   .FAQ-column {
-    width: 100%; /* Adjust width to fit two columns */
+    width: 100%;
     gap: 1rem;
   }
 
@@ -937,6 +936,28 @@ font-weight: 450;
 .event-card-holder{
   flex-wrap: wrap;
 }
+
+/* contact section  */
+.contact{
+  flex-direction: column;
+}
+.map div{
+  flex-direction: column;
+}
+.contact-info{
+  width: 100%;
+  gap: 0.2rem;
+  padding-top: 5px;
+}
+
+.contact-us {
+  padding: 10px;
+}
+
+  /* .email-footer  */
+  .email-footer div{
+    flex-direction: column;
+  }
 /* footer  */
 footer{
   width: 100%;
@@ -945,4 +966,4 @@ footer{
 }
 
 }
-}
+
