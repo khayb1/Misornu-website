@@ -10,19 +10,19 @@ searchIcon.addEventListener('click', () => {
 
 // FAQ section 
 function toggleContent(element) {
-    // // Close all other tabs first
-    // const allAdditionalText = document.querySelectorAll('.additional-text');
-    // const allIcons = document.querySelectorAll('.plus-icon, .minus-icon');
+    // Close all other tabs first
+    const allAdditionalText = document.querySelectorAll('.additional-text');
+    const allIcons = document.querySelectorAll('.plus-icon, .minus-icon');
     
-    // allAdditionalText.forEach(text => {
-    //     text.style.display = "none";  // Hide all additional text
-    // });
+    allAdditionalText.forEach(text => {
+        text.style.display = "none";  // Hide all additional text
+    });
     
-    // allIcons.forEach(icon => {
-    //     icon.textContent = "+"; // Reset all icons to plus
-    //     icon.classList.remove('minus-icon'); // Remove the minus class
-    //     icon.classList.add('plus-icon'); // Add the plus class
-    // });
+    allIcons.forEach(icon => {
+        icon.textContent = "+"; // Reset all icons to plus
+        icon.classList.remove('minus-icon'); // Remove the minus class
+        icon.classList.add('plus-icon'); // Add the plus class
+    });
     
     // Toggle the clicked tab
     const additionalText = element.nextElementSibling;
