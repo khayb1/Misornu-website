@@ -226,14 +226,14 @@ top: -40px;
 /* about us  */
 .about-us{
   height:fit-content;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 var(--margin)  0 var(--margin);
   position: relative;
   top: -5.7rem;
   background-color: var(--background);
-
+  overflow-x:hidden ;
 }
 .about-us h6{
   position: absolute;
@@ -766,7 +766,6 @@ footer div{
 .footer-links{
   display: flex;
   flex-direction: column;
-
 }
 .footer-links a{
   text-decoration: none;
@@ -790,13 +789,12 @@ color: var(--main-color);
 
 }
 .IG div{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .IG-images{
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   flex-grow: 1;
 }
 .end-footer{
@@ -830,7 +828,7 @@ padding:10px var(--margin);
   .hero{
     background-size: cover;
     height: 80vh; 
-    width: 100vw; 
+    width: 100%; 
     position: relative;
     top: -30;
     z-index: 1;
@@ -854,7 +852,7 @@ padding:10px var(--margin);
 /* about us  */
 .about-us{
   display: block;
-  width:100vw ;
+
 }
 .about-us h6{
 top: -40px;
@@ -958,12 +956,31 @@ font-weight: 450;
   .email-footer div{
     flex-direction: column;
   }
+
+  .email-footer img{
+    left: -15%;
+    }
 /* footer  */
 footer{
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-
+footer div{
+flex-direction: column;
+}
+.footer-links {
+  display:inline-block;  
+}
+.footer-links a{
+  margin-right: 10px;
+}
+.copyright{
+padding: 5px;
+}
+.end-footer{
+  background-color: #00070f;
+  padding:5px var(--margin);
+}
 }
 
