@@ -979,3 +979,17 @@ padding: 5px;
 }
 }
 
+
+/* animation  */
+.hidden{
+  opacity: 0; 
+  filter:blur(5px);
+   transform:scale(0.7);
+  transition: all 0.5s;
+
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
