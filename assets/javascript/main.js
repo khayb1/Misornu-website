@@ -1,3 +1,10 @@
+// Toggle the menu in mobile view
+const navbarMenuToggle = document.querySelector('.navbar-menu-toggle');
+const navbarLinks = document.querySelector('.navbar-link');
+
+navbarMenuToggle.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+});
 
 const searchIcon = document.querySelector('.search-icon');
 const searchContainer = document.querySelector('.search-container');
