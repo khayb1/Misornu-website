@@ -995,11 +995,14 @@ border: 5px solid rgb(235, 232, 232);
 }
 .about-us-img{
   width: 100%;
+  height: fit-content;
 }
 .about-us-img img{
 width: 100%;
-object-fit:fill;
+object-fit:contain;
+object-position: top;
 scale: 0.8;
+height: fit-content;
 
 }
 /* champion section  */
