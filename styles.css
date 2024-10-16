@@ -167,8 +167,6 @@ nav ul{
   color: var(--main-color);
   font-size: 20px;
 }
-
-
 /* hero section  */
 .hero{
   background:url(assets/images/hero.jpg);
@@ -238,6 +236,7 @@ nav ul{
 .about-us{
   height:fit-content;
   width: 100%;
+  /* height: 80vh; */
   display: flex;
   justify-content: space-between;
   padding: 0 var(--margin)  0 var(--margin);
@@ -251,8 +250,6 @@ nav ul{
   top:40px;
   color: var(--main-color);
   font-weight: 700;
- 
-
 }
 .about-us-text{
   height: 250px;
@@ -300,14 +297,20 @@ nav ul{
 }
 .about-us-img{
   width: 50%;
-  height: 100%;
+  height:100vh;
+
 }
 .about-us-img img{
  width: 100%;
  height: 100%;
- object-fit: cover;   
+ object-fit:contain;   
+ scale: 0.8;
  transform: rotateY(3.142rad);
  object-position: center;
+ transition: 0.5s ease;
+}
+.about-us-img img:hover{
+  scale: 0.9;
 }
 
 
@@ -877,8 +880,12 @@ color: var(--main-color);
   }
 .info{
   display: none;
-
 }
+.logo{
+width: 170px;
+height: 50px;
+}
+
 nav{
   margin: 0;
   padding: 0;
@@ -889,8 +896,7 @@ nav{
   -webkit-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
   -moz-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
 }
-nav ul {
-      height: fit-content;
+nav ul{
       margin:0 ;
       padding:0 0 30px; 
       display: flex;
@@ -899,22 +905,20 @@ nav ul {
       align-items: left;
       background-color: var(--background);
       z-index: 101;
-      transition:1s ease-in-out;
+      transition:0.5s ease-in-out;
       width: 100%;
-      height: auto;
+      height: 80vh;
       position: fixed;
-      top: 110px;
+      top: 70px;
       box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
       -webkit-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
       -moz-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
-
     }
   .navbar-link{
     display: none;
     transition: 1s ease;
     position: absolute;
-    top: 90px;
-  
+    top: 90px;  
   }
     nav a {
       text-decoration: none;
@@ -939,8 +943,7 @@ nav ul {
     }
     .navbar-link.active {
       display: block;
-      transition:1s ease-in-out;
-  }
+    }
 
   /* hero section  */
   .hero{
@@ -973,6 +976,7 @@ nav ul {
   display: block;
   top: 0;
   padding-bottom: 20px;
+  height: auto;
 
 }
 .about-us-text{
@@ -994,7 +998,8 @@ border: 5px solid rgb(235, 232, 232);
 }
 .about-us-img img{
 width: 100%;
-object-fit: fill;
+object-fit:fill;
+scale: 0.8;
 
 }
 /* champion section  */
@@ -1098,6 +1103,11 @@ padding: 5px;
 .end-footer{
   background-color: #00070f;
   padding:5px var(--margin);
+}
+
+/* for padding at te top of every section using fixed .navbar  */
+html {
+  scroll-padding-top: 90px; /* Adjust this value based on the height of your navbar */
 }
 }
 
