@@ -1,12 +1,7 @@
-// Toggle the menu in mobile view
-// const navbarMenuToggle = document.querySelector('.navbar-menu-toggle');
-// const navbarLinks = document.querySelector('.navbar-link');
-// navbarMenuToggle.addEventListener('click', () => {
-//     navbarLinks.classList.toggle('active');
-// });
+
 const navbarMenuToggle = document.querySelector('.navbar-menu-toggle');
-const navbarLinks = document.querySelector('.navbar-link'); // Assuming navbar-links contains all nav items
-const navLinkItems = document.querySelectorAll('.navbar-link a'); // Select all anchor tags in nav links
+const navbarLinks = document.querySelector('.navbar-link');
+const navLinkItems = document.querySelectorAll('.nav-links'); // Select all anchor tags in nav links
 
 // Toggle the menu when the hamburger is clicked
 navbarMenuToggle.addEventListener('click', () => {
