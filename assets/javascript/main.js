@@ -59,6 +59,16 @@ function toggleContent(element) {
     }
 }
 
+// what we do section popover
+function openPopover(id) {
+    document.getElementById(id).style.display = "flex";
+}
+
+function closePopover(id) {
+    document.getElementById(id).style.display = "none";
+}
+
+
 // scroll animation 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

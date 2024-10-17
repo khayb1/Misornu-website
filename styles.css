@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 :root{
-    --main-text: #111;
+    --main-text: #000;
     --background:#ffffff;
     --main-color: #0a7dfc;
     --second-text:#f1eeee;
@@ -230,6 +230,7 @@ nav ul{
 .hero-btn:hover{
   box-shadow: 0 0 0 #2681e2, 0 8px 10px rgba(0, 0, 0, 0.2);
   color: var(--background);
+  scale:0.9;
 }
 
 /* about us  */
@@ -311,6 +312,101 @@ nav ul{
   scale: 0.9;
 }
 
+
+/* What we do  */
+.what-we-do-section {
+  text-align: center;
+  padding:var(--margin);
+  background-color: #f5f5f5;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px; /* Space between cards */
+}
+
+.activity {
+  flex: 1 1 300px; /* Makes each card responsive */
+  max-width: 400px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.activity .icon {
+  width: 100%;
+  height: 250px;
+}
+.activity h4{
+font-size: large;
+font-weight: 500;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Popover styling */
+.popover-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popover-content {
+color: var(--main-text);
+ background-color:var(--background);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%; /* Responsive width */
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popover-content h2 {
+  margin-top: 0;
+  font-weight: 700;
+}
+.popover-content p{
+/* font-weight: 400; */
+font-style: oblique;
+font-size: large;
+}
+.close-btn {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  font-size: 3vw;
+  cursor: pointer;
+  color: red;
+ 
+}
 
 /* champion section  */
 .champion-section{
@@ -421,109 +517,7 @@ nav ul{
   border-top: 2px solid var(--second-text);
 }
 
-/* client section  */
 
-.client{
-  padding:150px var(--margin);
-  text-align:center ;
-  position: relative;
-  top: -150px;
-  background-color: var(--second-text);
-  height: max-content;
-  overflow:hidden;
-}
-.client h6{
-  color: var(--main-color);
-}
-.client h2{
-  font-weight: 700;
-}
-.client p{
-  font-weight: 400;
-  color: #777;
-}
-.client p span{
-  text-align: center;
-  display: block;
-}
-
-.client-logo{
-  position: absolute;
-  right: -100px;
-  top: 50px;
-  height: 100%;
-  opacity: 30%;
-}
-.card-holder{
-  padding-top: 50px;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  flex: 1;
-  /* width: 300px; */
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
-  position: relative;
-  transition: transform 0.3s ease; 
-}
-.card:hover {
-  transform: scale(1.05); 
-}
-
-.card img {
-  position: absolute;
-  top: -50px;
-  left: 40px;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.card p {
-  margin-top: 60px;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-.client-tab {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
-}
-
-.client-info {
-  display: flex;
-  flex-direction: column;
-  margin-right: 20px;
-}
-
-.client-info span {
-  font-size: 14px;
-  color: #666;
-  text-align: left;
-}
-
-.stars {
-  display: flex;
-  align-items: center;
-}
-
-.stars i {
-  color: gold;
-  margin-left: 5px;
-  font-size:x-small;
-}
 /* event section  */
 .event{
   padding:0 var(--margin);
@@ -1003,7 +997,12 @@ object-fit:contain;
 object-position: center;
 scale: 0.8;
 height: fit-content;
-
+}
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size:xx-large;
 }
 /* champion section  */
  .champion-section{

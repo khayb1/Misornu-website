@@ -67,7 +67,7 @@
               <a href="#hero"class="nav-links">Home</a>
               <a href="#about"class= "nav-links">About</a>
               <a href="#faq"class= "nav-links">FAQ</a>
-              <a href="#client"class="nav-links">Client</a>
+              <a href="#what-we-do"class="nav-links">What we do</a>
               <a href="#event"class= "nav-links">Event</a>
               <a href="#footer"class="nav-links">Contact</a>
               <div class="search-container">
@@ -106,18 +106,7 @@
                 Misornu Safety Centre is a dedicated non-profit organization committed to creating safer communities through education and collaboration. Our mission enhances community safety and builds trust by offering programs focused on crime prevention and best safety practices. We believe in the power of partnerships and effective communication to address safety concerns, empowering individuals to take an active role in their own safety and the safety of others. Join us in fostering a culture of vigilance and preparedness for all.
                 </p>
             </span>
-          </div>          
-          
-            <div>
-                <img src="assets/images/what we do.png"  alt="">
-                <span>
-                <h4>What we do</h4>
-                <p>We are dedicated to building safer communities through education, collaboration, and proactive engagement. Our organization provides comprehensive programs and trainings focused on crime prevention, safety best practices, and community mediation. By offering training that equips individuals and organizations with the tools needed to stay vigilant, we promote a "Safety First” mindset at every level.
-                  Our efforts are centered on fostering partnerships and encouraging communication between key stakeholders, ensuring a united front in addressing safety concerns. 
-                  </p>
-              </span>
-            </div>
-
+          </div>
             <div>
               <img src="assets/images/vision.png"  alt="">
               <span>
@@ -140,6 +129,62 @@
         </div>
         </section>
 
+           <!-- what we do section     -->
+         <div class="what-we-do-section" id="what-we-do">
+          <h2>What We Do</h2>
+          <div class="activities">
+              <!-- Activity 1 -->
+              <div class="activity hidden">
+                  <img src="assets/images/training.jpg" alt="Education & Training" class="icon">
+                  <h4>Education & Training</h4>
+                  <p>Equipping communities with safety tools.</p>
+                  <button class="hero-btn" onclick="openPopover('popover-1')">Know More</button>
+              </div>
+      
+              <!-- Activity 2 -->
+              <div class="activity hidden ">
+                  <img src="assets/images/collaboration.jpg" alt="Collaboration & Partnerships" class="icon">
+                  <h4>Collaboration & Partnerships</h4>
+                  <p>Building strong safety partnerships.</p>
+                  <button class="hero-btn" onclick="openPopover('popover-2')">Know More</button>
+              </div>
+      
+              <!-- Activity 3 -->
+              <div class="activity hidden">
+                  <img src="assets/images/proactive.jpg" alt="Proactive Engagement" class="icon">
+                  <h4>Proactive Engagement</h4>
+                  <p>Promoting proactive community safety.</p>
+                  <button class="hero-btn" onclick="openPopover('popover-3')">Know More</button>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Popover for Education & Training -->
+      <div class="popover-container" id="popover-1">
+          <div class="popover-content">
+              <span class="close-btn" onclick="closePopover('popover-1')">×</span>
+              <h2>Education & Training</h2>
+              <p>We provide comprehensive programs and training focused on crime prevention, safety best practices, and community mediation. By equipping individuals and organizations with the necessary tools, we promote a "Safety First" mindset at every level.</p>
+          </div>
+      </div>
+      
+      <!-- Popover for Collaboration & Partnerships -->
+      <div class="popover-container" id="popover-2">
+          <div class="popover-content">
+              <span class="close-btn" onclick="closePopover('popover-2')">×</span>
+              <h2>Collaboration & Partnerships</h2>
+              <p>Our approach emphasizes collaboration with key stakeholders to foster strong partnerships. We believe that safety is a shared responsibility, and by encouraging open communication, we ensure a united front in addressing local and regional safety issues.</p>
+          </div>
+      </div>
+      
+      <!-- Popover for Proactive Engagement -->
+      <div class="popover-container" id="popover-3">
+          <div class="popover-content">
+              <span class="close-btn" onclick="closePopover('popover-3')">×</span>
+              <h2>Proactive Engagement</h2>
+              <p>We are dedicated to building safer communities by actively engaging with individuals and organizations. Through hands-on initiatives and tailored interventions, we work to create environments where safety is prioritized, and communities can thrive without fear.</p>
+          </div>
+      </div> 
         <!-- champiopn section  -->
         <section class="champion-section">
           <div class="champion-container hidden">
@@ -218,50 +263,7 @@
             <!-- faq tabs -->
          </section>
 
-         <!-- client section     -->
-          <section class="client" id="client">
-            <h6 class="">Client's feedback is our  achievement</h6>
-            <h2>Client satisfaction is our goal!</h2>
-            <p>It is a long established fact that a reader will be distracted by the readable <span>content of a page when looking at its layout. </span></p>
-
-            <img class="client-logo" src="assets/images/Client background image-bg.png" alt="">
-
-            <div class="card-holder "> 
-              <div class="card hidden">
-                <img src="assets/images/client-1.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt distinctio fugiat excepturi adipisci voluptatem deserunt nisi totam ea exercitationem aut recusandae accusantium.</p>
-                <div class="client-tab">
-                  <div> <h6>Tom Jhon</h6> <span>Customer Manager</span></div> 
-                  <div class="stars">
-                    <i class="fas fa-star fa-1x"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                  </div>
-                  
-                </div>
-            </div>
-                <div class="card hidden">
-                  <img src="assets/images/client-2.jpg" alt="">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt distinctio fugiat excepturi adipisci voluptatem deserunt nisi totam ea exercitationem aut recusandae accusantium.</p>
-                  <div class="client-tab">
-                   <div> <h6>Onni Jhon</h6> <span>Customer Manager</span></div> 
-                    <div class="stars">
-                      <i class="fas fa-star fa-1x"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                  </div>
-              </div>
-
-              <div class="card hidden">
-                <img src="assets/images/client-3.jpg" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt distinctio fugiat excepturi adipisci voluptatem deserunt nisi totam ea exercitationem aut recusandae accusantium.</p>
-                <div class="client-tab">
-                  <div> <h6>Fira Roger</h6> <span>Customer Manager</span></div> 
-                  <div class="stars">
-                    <i class="fas fa-star fa-1x"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                  </div>
-                  
-                </div>
-            </div>
-            </div>
-          </section>
+        
 
           <!-- event section  -->
            <section class="event" id="event">
