@@ -5,17 +5,15 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+
 :root{
-    --main-text: #000;
+    --main-text: #111;
     --background:#ffffff;
     --main-color: #0a7dfc;
     --second-text:#f1eeee;
     --white-text:#fff;
     --margin:11%;
-}
-a{
-  text-decoration: none;
-  color: var(--main-text);
+
 }
 .socials{
   display: flex;
@@ -83,6 +81,7 @@ header{
 #header-contact span, #header-location span, #header-mail span, .logo span {
   display: block; 
   color: var(--main-text);
+  font-weight: 700;
   font-size: 1vw;
 }  
 .fas-i{
@@ -123,11 +122,16 @@ nav ul{
   nav a:nth-child(1){
     margin-left:2rem;
   }
-  nav a:nth-child(8){
+ .consult{
     background-color: var(--background);
     padding: 10px;
     border: none;
     color: grey;
+    transition: 0.2s ease;
+  } 
+  .consult:hover{
+    color: var(--main-text);
+    scale: 0.92;
   }
 
   /* search  */
@@ -167,6 +171,8 @@ nav ul{
   color: var(--main-color);
   font-size: 20px;
 }
+
+
 /* hero section  */
 .hero{
   background:url(assets/images/hero.jpg);
@@ -230,11 +236,12 @@ nav ul{
 .hero-btn:hover{
   box-shadow: 0 0 0 #2681e2, 0 8px 10px rgba(0, 0, 0, 0.2);
   color: var(--background);
-  scale:0.9;
+  transform: scale(0.9);
 }
 
 /* about us  */
 .about-us{
+  height:fit-content;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -249,9 +256,11 @@ nav ul{
   top:40px;
   color: var(--main-color);
   font-weight: 700;
+ 
+
 }
 .about-us-text{
-  max-height: 400px;
+  height: 250px;
   overflow-y: scroll;
   width: 30vw;
   padding-left: 20px;
@@ -296,117 +305,16 @@ nav ul{
 }
 .about-us-img{
   width: 50%;
-  height:100vh;
-
+  height: 100%;
 }
 .about-us-img img{
  width: 100%;
  height: 100%;
- object-fit:contain;   
- scale: 0.8;
+ object-fit: cover;   
  transform: rotateY(3.142rad);
  object-position: center;
- transition: 0.5s ease;
-}
-.about-us-img img:hover{
-  scale: 0.9;
 }
 
-
-/* What we do  */
-.what-we-do-section {
-  text-align: center;
-  padding:20px var(--margin) ;
-  background-color: #f5f5f5;
-}
-
-.activities {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 20px; /* Space between cards */
-}
-
-.activity {
-  flex: 1 1 300px; /* Makes each card responsive */
-  max-width: 400px;
-  text-align: center;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-}
-
-.activity .icon {
-  width: 100%;
-  height: 250px;
-}
-.activity h4{
-font-size: large;
-font-weight: 500;
-}
-
-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Popover styling */
-.popover-container {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popover-content {
-color: var(--main-text);
- background-color:var(--background);
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  width: 90%; /* Responsive width */
-  text-align: left;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.popover-content h2 {
-  margin-top: 0;
-  font-weight: 700;
-}
-.popover-content p{
-/* font-weight: 400; */
-font-style: oblique;
-font-size: large;
-}
-.close-btn {
-  position: absolute;
-  top: 7px;
-  right: 12px;
-  font-size: 3vw;
-  cursor: pointer;
-  color: red;
- 
-}
 
 /* champion section  */
 .champion-section{
@@ -500,7 +408,7 @@ font-size: large;
 }
 
 .plus-icon {
-  color: black; /* Default color for the plus sign */
+  color: var(--main-text); /* Default color for the plus sign */
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -517,7 +425,109 @@ font-size: large;
   border-top: 2px solid var(--second-text);
 }
 
+/* client section  */
 
+.client{
+  padding:150px var(--margin);
+  text-align:center ;
+  position: relative;
+  top: -150px;
+  background-color: var(--second-text);
+  height: max-content;
+  overflow:hidden;
+}
+.client h6{
+  color: var(--main-color);
+}
+.client h2{
+  font-weight: 700;
+}
+.client p{
+  font-weight: 400;
+  color: #777;
+}
+.client p span{
+  text-align: center;
+  display: block;
+}
+
+.client-logo{
+  position: absolute;
+  right: -100px;
+  top: 50px;
+  height: 100%;
+  opacity: 30%;
+}
+.card-holder{
+  padding-top: 50px;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  /* width: 300px; */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: transform 0.3s ease; 
+}
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.card img {
+  position: absolute;
+  top: -50px;
+  left: 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card p {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.client-tab {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.client-info span {
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars i {
+  color: gold;
+  margin-left: 5px;
+  font-size:x-small;
+}
 /* event section  */
 .event{
   padding:0 var(--margin);
@@ -629,9 +639,7 @@ iframe{
   margin-bottom: 30px;
   color: #666;
 }
-.contact-btn a{
-  color: var(--background);
-}
+
 .form-group {
   position: relative;
   margin-bottom: 20px;
@@ -737,11 +745,8 @@ opacity: 40%;
     border-radius: 50px;
     cursor: pointer;
     font-size: 16px;
-    margin: 0;
   }
-.input-container button a{
-  color: var(--background);
-}
+
   /* footer section  */
   footer{
     padding: 20px var(--margin);
@@ -765,20 +770,16 @@ footer div{
  .footer-logo span{
   display:flex ;
   justify-content: space-evenly;
- }
- .footer-icon{
-  color: var(--main-color) ;
+  opacity: 20%;
  }
 .footer-contact{
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   font-size: 0.9rem;
-  padding-left:20px ;
 }
 .footer-contact p{
   display: flex;
-  padding-left: 5px;
 }
 .footer-links{
   display: flex;
@@ -855,7 +856,7 @@ color: var(--main-color);
     z-index: 100;
     margin: 0;
     background-color: var(--background);
-    position: sticky;
+    position: fixed;
     box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
     -webkit-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
     -moz-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
@@ -881,12 +882,8 @@ color: var(--main-color);
   }
 .info{
   display: none;
-}
-.logo{
-width: 170px;
-height: 50px;
-}
 
+}
 nav{
   margin: 0;
   padding: 0;
@@ -897,7 +894,8 @@ nav{
   -webkit-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
   -moz-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
 }
-nav ul{
+nav ul {
+      height: fit-content;
       margin:0 ;
       padding:0 0 30px; 
       display: flex;
@@ -906,20 +904,22 @@ nav ul{
       align-items: left;
       background-color: var(--background);
       z-index: 101;
-      transition:0.5s ease-in-out;
+      transition:1s ease-in-out;
       width: 100%;
-      height: 80vh;
+      height: auto;
       position: fixed;
-      top: 70px;
+      top: 110px;
       box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
       -webkit-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
       -moz-box-shadow: 0px 7px 8px -2px rgba(66,65,65,0.75);
+
     }
   .navbar-link{
     display: none;
     transition: 1s ease;
     position: absolute;
-    top: 90px;  
+    top: 90px;
+  
   }
     nav a {
       text-decoration: none;
@@ -944,7 +944,8 @@ nav ul{
     }
     .navbar-link.active {
       display: block;
-    }
+      transition:1s ease-in-out;
+  }
 
   /* hero section  */
   .hero{
@@ -977,13 +978,12 @@ nav ul{
   display: block;
   top: 0;
   padding-bottom: 20px;
-  height: fit-content;
-}
 
+}
 .about-us-text{
   width: 100%;
-  margin-top: 70px; 
-  height: 300px;
+  margin-top: 70px;
+  
 }
 .about-us div{
   display: block;
@@ -996,20 +996,11 @@ border: 5px solid rgb(235, 232, 232);
 }
 .about-us-img{
   width: 100%;
-  height: fit-content;
 }
 .about-us-img img{
 width: 100%;
-object-fit:contain;
-object-position: center;
-scale: 0.8;
-height: fit-content;
-}
-.close-btn {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size:xx-large;
+object-fit: fill;
+
 }
 /* champion section  */
  .champion-section{
@@ -1036,6 +1027,16 @@ left: 0;
   padding: 10px 10px 10px 10px;
 }
 
+/* client section  */
+.client p{
+color: var(--main-text);
+font-weight: 450;
+}
+.card-holder{
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+}
   /* FAQ section  */
   .info{
     display: none;
@@ -1102,11 +1103,6 @@ padding: 5px;
 .end-footer{
   background-color: #00070f;
   padding:5px var(--margin);
-}
-
-/* for padding at te top of every section using fixed .navbar  */
-html {
-  scroll-padding-top: 90px; /* Adjust this value based on the height of your navbar */
 }
 }
 
