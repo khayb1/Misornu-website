@@ -23,7 +23,6 @@ searchIcon.addEventListener('click', () => {
     const searchInput = searchContainer.querySelector('.search-input');
     searchInput.focus(); // Focus the input when activated
 });
-
 // FAQ section 
 function toggleContent(element) {
     // Close all other tabs first

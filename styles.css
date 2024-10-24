@@ -97,6 +97,7 @@ nav{
 position: relative;
 top: -30px;
 }
+
 nav ul{
     list-style: none;
     margin:0 var(--margin);
@@ -114,11 +115,14 @@ nav ul{
     text-decoration: none;
     color: var(--white-text);
     font-weight: 600;
+    padding: 10px;
+  }
+  nav a:hover{
+    background: var(--background);
+    border-radius: 10px;
+    color: var(--main-color);
   }
 
-  nav a:hover {
-    color: var(--second-text);
-  }
   nav a:nth-child(1){
     margin-left:2rem;
   }
@@ -351,17 +355,20 @@ overflow-y: scroll;
   flex: 1 1 300px; /* Makes each card responsive */
   max-width: 400px;
   text-align: center;
-  padding: 10px;
+  padding-bottom: 10px ;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  overflow: hidden;
 }
 
 .activity .icon {
   width: 100%;
   height: 250px;
-}
+  transition: all 1s ease;
+  position: relative;
+} 
 .activity h4{
 font-size: large;
 font-weight: 500;
@@ -563,7 +570,7 @@ font-size: large;
 .event-card{
   box-shadow:2px 2px 2px 2px  rgba(0,0,0,0.1);
   border-radius: 5px;
-
+  width: 33.3%;
   overflow: hidden;
 }
 .card-img-top:hover{
@@ -786,6 +793,15 @@ footer div{
  .footer-icon{
   color: var(--main-color) ;
  }
+
+
+.footer-icon:nth-child(3):hover{
+  color:rgb(253, 130, 151)
+}
+.footer-icon:nth-child(4):hover{
+  color:rgb(173, 25, 25);
+}
+ 
 .footer-contact{
   display: flex;
   flex-direction: column;
@@ -888,6 +904,7 @@ color: var(--main-color);
     background-color: var(--background);
     padding: 0 10px;
   }
+
   .fas-i{
     color: var(--main-color);
     margin-right: 5px;
@@ -943,6 +960,11 @@ nav ul{
       color: var(--main-color);
       font-weight: 600;
       font-size: 7vw;
+    }
+    nav a:hover{
+      background: #2681e2;
+      border-radius: 10px;
+      color: var(--white-text);
     }
     nav a:nth-child(1){
       margin-left:0;
